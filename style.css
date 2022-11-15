@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --strongCyan: hsl(172, 67%, 45%);
+}
+
+* {
+  font-family: "Space Mono", monospace, sans-serif;
+}
+
+body {
+  background-color: #c5e4e7;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div {
+  margin-top: 50px;
+}
+
+.logo-image {
+  width: 86px;
+  margin-bottom: 40px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  border-radius: 25px 25px 0px 0px;
+  margin: 0;
+  padding: 24px;
+}
+
+.label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--darkGrayishCyan);
+  margin-bottom: 6px;
+}
+
+input {
+  color: var(--veryDarkCyan);
+  font-size: 24px;
+  line-height: 35px;
+  text-align: right;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  padding: 0 20px;
+  background: var(--veryLightGrayishCyan);
+  margin-bottom: 32px;
+}
+
+.custom {
+  font-size: 24px;
+  line-height: 35px;
+  text-align: right;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  padding: 0 10px;
+  background: var(--veryLightGrayishCyan);
+  margin-bottom: 32px;
+}
+
+#billAmount {
+  background: var(--veryLightGrayishCyan) url(images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+  background-size: 10px;
+}
+
+#peopleAmount {
+  background: var(--veryLightGrayishCyan) url(images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+  background-size: 13px;
+}
+
+.billBox,
+.tipButtonBox,
+.peopleBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tipButtonBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.tipButtons {
+  display: grid;
+  grid-template-columns: 160px 160px;
+  grid-template-rows: 48px 48px 48px;
+  gap: 16px;
+}
+
+.tipBtn {
+  background: var(--veryDarkCyan);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 24px;
+  line-height: 35px;
+  text-align: center;
+  transition: 0.2;
+  cursor: pointer;
+}
+
+.tipBtn:active {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+
+.tipBtn:focus {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+
+#customAmount {
+  height: 48px;
+  background-color: var(--veryLightGrayishCyan);
+}
+
+.billBox p,
+.peopleBox p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #e17457;
+  text-align: right;
+  display: none;
+}
+
+.container-2 {
+  border-radius: 15px;
+  margin: 8px;
+  background-color: var(--veryDarkCyan);
+  padding: 40px 22px 24px 24px;
+}
+
+.tipAmount,
+.totalAmount {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.dollar {
+  display: flex;
+  flex-direction: row;
+}
+
+.totalPerPerson h2,
+.tipPerPerson h2 {
+  font-size: 16px;
+  color: var(--white);
+  line-height: 24px;
+}
+
+.totalPerPerson p,
+.tipPerPerson p {
+  font-size: 15px;
+  line-height: 19px;
+  color: var(--grayishCyan);
+}
+
+.tipPerPersonNum,
+.totalPerPersonNum,
+.dollar p {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 47px;
+  text-align: right;
+  color: var(--strongCyan);
+  transition: 0.5s;
+}
+
+#reset {
+  height: 48px;
+  width: 100%;
+  border-radius: 5px;
+  background: var(--strongCyan);
+  border: none;
+  text-align: center;
+  color: var(--veryDarkCyan);
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  transition: 0.2;
+}
+
+#reset:hover {
+  cursor: pointer;
+}
+
+#reset:active {
+  background-color: #9fe8df;
+}
+
+@media only screen and (min-width: 1000px) {
+  .div {
+    margin-top: 90px;
+  }
+  .logo-image {
+    margin-bottom: 90px;
+  }
+  .wrapper {
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 25px;
+    min-width: 920px;
+    max-width: 1025px;
+    padding: 32px;
+    margin-bottom: 240px;
+  }
+  .container-1 {
+    margin: 13px 0 16px 16px;
+    flex-basis: 50%;
+  }
+  .tipButtons {
+    grid-template-columns: 130px 130px 130px;
+    grid-template-rows: 48px 48px;
+  }
+  .peopleBox input {
+    margin-bottom: 0;
+  }
+  .container-2 {
+    margin: 0;
+    margin-left: 45px;
+    flex-basis: 50%;
+    padding: 40px 22px 40px 24px;
+  }
+  .tipButtons input {
+    margin: 0;
+  }
+  #reset {
+    margin-top: 122px;
+  }
+}

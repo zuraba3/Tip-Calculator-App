@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <script src="app.js" defer></script>
+    <title>Tip Calculator App</title>
+  </head>
+  <body>
+    <header>
+      <div class="div">
+        <img src="images/logo.svg" alt="logo" class="logo-image" />
+      </div>
+    </header>
+
+    <section>
+      <div class="wrapper">
+        <div class="container-1">
+          <div class="billBox">
+            <p id="zero-1">Can't be zero!</p>
+            <p id="high-1">Exceeds maximum!</p>
+            <label for="billAmount" id="billNumber" class="label">Bill</label>
+            <input type="number" placeholder="0.00" id="billAmount" />
+          </div>
+
+          <div class="tipButtonBox">
+            <h2 class="label">Select Tip %</h2>
+            <div class="tipButtons">
+              <button class="tipBtn" id="5per">5%</button>
+              <button class="tipBtn" id="10per">10%</button>
+              <button class="tipBtn" id="15per">15%</button>
+              <button class="tipBtn" id="25per">25%</button>
+              <button class="tipBtn" id="50per">50%</button>
+              <input
+                type="number"
+                id="customAmount"
+                placeholder="Custom"
+                name="customAmount"
+                min="0"
+                class="custom"
+              />
+            </div>
+          </div>
+
+          <div class="peopleBox">
+            <p id="zero-2">Can't be zero!</p>
+            <p id="high-2">Exceeds maximum!</p>
+            <label for="peopleAmount" class="label">Number of people</label>
+            <input type="number" placeholder="0" id="peopleAmount" />
+          </div>
+        </div>
+
+        <div class="container-2">
+          <div class="tipAmount">
+            <div class="tipPerPerson">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <div class="dollar">
+              <p>$</p>
+              <div class="tipPerPersonNum">0.00</div>
+            </div>
+          </div>
+
+          <div class="totalAmount">
+            <div class="totalPerPerson">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <div class="dollar">
+              <p>$</p>
+              <div class="totalPerPersonNum">0.00</div>
+            </div>
+          </div>
+
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
